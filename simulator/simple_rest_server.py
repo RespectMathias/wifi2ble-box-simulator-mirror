@@ -36,11 +36,12 @@ class SimpleRESTServer(BaseHTTPRequestHandler):
         cls.API_KEYS = cls.load_api_keys(cls.API_KEYS_FILE)
     
     def _send_response(self, status_code, data):
+        response_body = json.dumps(data).encode("utf-8")
         self.send_response(status_code)
         self.send_header("Content-Type", "application/json")
+        self.send_header("Content-Length", str(len(response_body)))
         self.end_headers()
-        response = json.dumps(data).encode("utf-8")
-        self.wfile.write(response)
+        self.wfile.write(response_body)
         logging.info(f"Response sent: {status_code} - {data}")
     
     def _is_valid_path(self):
