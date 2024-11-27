@@ -107,7 +107,7 @@ Replace `<api_key>` with a valid API key from `api_keys.json`.
     {
       "config": {
         "name": "DESK 4486",
-        "manufacturer": "Linak A/S"
+        "manufacturer": "Desk-O-Matic Co."
       },
       "state": {
         "position_mm": 680,

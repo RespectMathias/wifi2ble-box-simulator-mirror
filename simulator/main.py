@@ -32,13 +32,13 @@ def run(server_class=HTTPServer, handler_class=SimpleRESTServer, port=8000, use_
     desk_manager = DeskManager(speed)
     
     logger.info("Adding default desks...")
-    desk_manager.add_desk("cd:fb:1a:53:fb:e6", "DESK 4486", "Linak A/S", UserType.ACTIVE)
-    desk_manager.add_desk("ee:62:5b:b8:73:1d", "DESK 6743", "Linak A/S", UserType.STANDING)
+    desk_manager.add_desk("cd:fb:1a:53:fb:e6", "DESK 4486", "Desk-O-Matic Co.", UserType.ACTIVE)
+    desk_manager.add_desk("ee:62:5b:b8:73:1d", "DESK 6743", "Desk-O-Matic Co.", UserType.STANDING)
     
     if len(desk_manager.get_desk_ids()) < desks:
         logger.info(f"Adding {desks - len(desk_manager.get_desk_ids())} additional desks.")
         for i in range(desks - len(desk_manager.get_desk_ids())):
-            desk_manager.add_desk(generate_desk_id(), generate_desk_name(), "Linak A/S", UserType.ACTIVE)
+            desk_manager.add_desk(generate_desk_id(), generate_desk_name(), "Desk-O-Matic Co.", UserType.ACTIVE)
     
     desk_manager.start_updates()
 
