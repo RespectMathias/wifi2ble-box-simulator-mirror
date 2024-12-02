@@ -6,6 +6,10 @@ on:
       - __mirror  # Trigger workflow when there are changes to the __mirror branch
   workflow_dispatch:  # Allows manual trigger
 
+concurrency:
+  group: 'build-docker-image'
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
