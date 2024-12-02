@@ -1,6 +1,6 @@
 # 🛠️ Desk Management REST API (Mirrored Repository)
 
-This repository mirrors the **Desk Management REST API**, simulating desks with configurable properties and real-time state tracking. It builds and publishes the simulator as a Docker image. For full details, visit [the master branch](../../tree/main).
+This repository mirrors and publishes the **Desk Management REST API** automatically, simulating desks with configurable properties and real-time state tracking. It builds and publishes the simulator as a Docker image. For full details, visit [the master branch](../../tree/main).
 
 ## 🚀 Quick Start
 
