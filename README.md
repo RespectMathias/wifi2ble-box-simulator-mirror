@@ -17,7 +17,6 @@ docker run -e ARGS="--port 8080 --speed 100" -p 8080:8080 respectmathias/wifi2bl
 ### 🛠️ Run with Docker Compose:
 Add this to your `docker-compose.yml`:
 ```yaml
-version: '3.8'
 services:
   desk-simulator:
     image: respectmathias/wifi2ble-box-simulator:latest
