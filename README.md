@@ -33,4 +33,4 @@ docker-compose up
 
 ## ⚠️ Disclaimer
 
-The simulator’s `main.py` is slightly modified to bind to `0.0.0.0` (required for Docker) instead of `localhost`. This ensures compatibility with containerized environments.
+The simulator’s `main.py` is slightly modified automatically to bind to `0.0.0.0` (required for Docker) instead of `localhost`. This ensures compatibility with containerized environments.
